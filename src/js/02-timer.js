@@ -50,7 +50,7 @@ function convertMs(ms) {
 }
 
 
-const addLeadingZDero = (value) => value.toString().padStart(2, '0');
+const addLeadingZero = (value) => value.toString().padStart(2, '0');
 
 
 startBtn.addEventListener('click', () => {
@@ -61,7 +61,7 @@ startBtn.addEventListener('click', () => {
 
       if (countdown >= 0) {
          const { days, hours, minutes, seconds } = convertMs(countdown);
-
+         timerHtml.style.color = 'white';
 
 
          d.textContent = addLeadingZero(days);
