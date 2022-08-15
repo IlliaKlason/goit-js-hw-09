@@ -19,10 +19,8 @@ function createPromise(position, delay) {
 }
 btnCreatePromise.addEventListener('click', e => {
   e.preventDefault();
-  let firstDelay = +delay.value;
-  let delayStep = +step.value;
   for (let i = 0; i < amount.value; i++) {
-    createPromise(i + 1, firstDelay + delayStep * i)
+    createPromise(i + 1, Number(delay.value) + Number(step.value) * i)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
           `💡 Fulfilled promise ${position} in ${delay}ms`
