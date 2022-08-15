@@ -13,9 +13,11 @@ let timerId = null;
 btnStart.addEventListener('click', () => {
    btnStart.disabled = true;
    btnStop.disabled = false;
-   const randomColor = getRandomHexColor()
+
    timerId = setInterval(() => {
-      textColor.style.color = randomColor
+      const randomColor = getRandomHexColor();
+      textColor.textContent = randomColor;
+      textColor.style.color = "white";
       document.body.style.backgroundColor = randomColor;
    }, 1000);
 
