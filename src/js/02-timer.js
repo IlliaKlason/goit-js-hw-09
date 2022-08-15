@@ -55,7 +55,7 @@ const addLeadingZero = (value) => value.toString().padStart(2, '0');
 
 startBtn.addEventListener('click', () => {
    let timer = setInterval(() => {
-      let countdown = new Date(dateChosen.value) - new Date();
+      const countdown = new Date(dateChosen.value) - new Date();
 
       startBtn.disabled = true;
 
