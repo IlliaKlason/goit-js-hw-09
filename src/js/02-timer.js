@@ -50,9 +50,8 @@ function convertMs(ms) {
 }
 
 
-function addLeadingZero(value) {
-   return value.toString().padStart(2, '0');
-}
+const addLeadingZero = (value) => value.toString().padStart(2, '0');
+
 
 startBtn.addEventListener('click', () => {
    let timer = setInterval(() => {
