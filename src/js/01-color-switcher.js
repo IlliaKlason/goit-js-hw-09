@@ -15,9 +15,8 @@ btnStart.addEventListener('click', () => {
    btnStop.disabled = false;
 
    timerId = setInterval(() => {
-      textColor.textContent = getRandomHexColor()
       textColor.style.color = getRandomHexColor()
-
+      document.body.style.backgroundColor = getRandomHexColor();
    }, 1000);
 
 });
