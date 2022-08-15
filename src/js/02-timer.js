@@ -50,7 +50,7 @@ function convertMs(ms) {
 }
 
 
-const addLeadingZero = (value) => value.toString().padStart(2, '0');
+const addLeadingZDero = (value) => value.toString().padStart(2, '0');
 
 
 startBtn.addEventListener('click', () => {
