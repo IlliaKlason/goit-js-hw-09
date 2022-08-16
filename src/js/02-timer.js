@@ -54,7 +54,7 @@ const addLeadingZero = (value) => value.toString().padStart(2, '0');
 
 
 startBtn.addEventListener('click', () => {
-   let timer = setInterval(() => {
+   let timerID = setInterval(() => {
       const countdown = new Date(dateChosen.value) - new Date();
 
       startBtn.disabled = true;
@@ -74,7 +74,7 @@ startBtn.addEventListener('click', () => {
       } else {
          Notiflix.Notify.success('Countdown finished');
          timerHtml.style.color = 'blue';
-         clearInterval(timer);
+         clearInterval(timerID);
       }
    }, 1000);
 });
